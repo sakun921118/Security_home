@@ -17,6 +17,7 @@ class Hello_page : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_hello_page, container, false)
 
+
         Handler(Looper.getMainLooper()).postDelayed({
             view?.let { Navigation.findNavController(it).navigate(R.id.action_hello_page_to_fastLogin_page) }
         }, 1500)

@@ -1,5 +1,6 @@
 package com.sakun.security_home
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.os.Build
@@ -9,6 +10,7 @@ import android.os.Message
 import android.provider.Settings
 import android.widget.Toast
 import androidx.annotation.RequiresApi
+import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AlertDialog
 import androidx.biometric.BiometricManager
 import androidx.biometric.BiometricManager.Authenticators.BIOMETRIC_STRONG
@@ -21,17 +23,27 @@ class MainActivity : AppCompatActivity(), Communicator {
 
     private lateinit var binding: ActivityMainBinding
 
+    @SuppressLint("HardwareIds")
     @RequiresApi(Build.VERSION_CODES.R)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        setSupportActionBar(binding.toolbar)
+
+        val androidId = Settings.Secure.getString(contentResolver, Settings.Secure.ANDROID_ID)
+
+        val toggle = ActionBarDrawerToggle(this, binding.drawerLayout, binding.toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
+        binding.drawerLayout.addDrawerListener(toggle)
+        toggle.syncState()
+        actionBarHide()
+
         if(getUserLocalData() == null) {
             updateUserLocalData(
                 UserLocalData(
                 "sakun", "921118", false,
-                false, 0, 15000, "", "")
+                false, 0, 15000, androidId, "")
             )
         }
 
@@ -108,5 +120,13 @@ class MainActivity : AppCompatActivity(), Communicator {
             userLocalData.appPauseTime = 0
             updateUserLocalData(userLocalData)
         }
+    }
+
+    override fun actionBarHide() {
+        supportActionBar?.hide()
+    }
+
+    override fun actionBarShow() {
+        supportActionBar?.show()
     }
 }

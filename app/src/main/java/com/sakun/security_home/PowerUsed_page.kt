@@ -21,6 +21,5 @@ class PowerUsed_page : Fragment() {
 
     override fun onResume() {
         super.onResume()
-        Toast.makeText(view?.context, communicator.loginTimeout().toString(), Toast.LENGTH_SHORT).show()
     }
 }

@@ -33,8 +33,10 @@ class Main_page : Fragment(), View.OnClickListener {
     ): View? {
         _binding = FragmentMainPageBinding.inflate(inflater, container, false)
         val view = binding.root
-
         communicator = activity as Communicator
+
+        communicator.actionBarShow()
+
         userLocalData = communicator.getUserLocalData()!!
 
         binding.aboutUsBtn.setOnClickListener(this)

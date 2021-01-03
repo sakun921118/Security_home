@@ -41,6 +41,7 @@ class FastLogin_page : Fragment(), View.OnClickListener {
         val view = binding.root
 
         communicator = activity as Communicator
+        communicator.actionBarHide()
         passwordImg = arrayOf(binding.num1Img, binding.num2Img, binding.num3Img, binding.num4Img, binding.num5Img, binding.num6Img)
 
         userLocalData = communicator.getUserLocalData()!!
@@ -117,7 +118,7 @@ class FastLogin_page : Fragment(), View.OnClickListener {
 
     private fun useBiometricLogin() {
         promptInfo = BiometricPrompt.PromptInfo.Builder()
-            .setTitle("Biometric login for my app")
+            .setTitle("Biometric login for Security_home")
             .setSubtitle("Log in using your biometric credential")
             .setNegativeButtonText("Use account password")
             .build()
@@ -171,6 +172,7 @@ class FastLogin_page : Fragment(), View.OnClickListener {
                 messageBox("Use biometric login?", "Did you want to use biometric login?")
             }
             else {
+                communicator.resetAppTimeout()
                 changeFragment()
             }
         }

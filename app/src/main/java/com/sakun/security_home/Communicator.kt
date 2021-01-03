@@ -5,4 +5,6 @@ interface Communicator {
     fun getUserLocalData(): UserLocalData?
     fun loginTimeout(): Boolean
     fun resetAppTimeout()
+    fun actionBarHide()
+    fun actionBarShow()
 }

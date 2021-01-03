@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item android:title="Room">
+            <menu>
+                <item
+                    android:id="@+id/nav_home"
+                    android:title="Home control"
+                    android:icon="@drawable/ic_home"/>
+                <item
+                    android:id="@+id/nav_powerUsed"
+                    android:title="Power used"
+                    android:icon="@drawable/ic_power_used"/>
+                <item
+                    android:id="@+id/nav_administrator"
+                    android:title="Administrator"
+                    android:icon="@drawable/ic_manage"
+                    android:visible="false"/>
+            </menu>
+        </item>
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item android:title="App">
+            <menu>
+                <item
+                    android:id="@+id/nav_profile"
+                    android:title="Profile"
+                    android:icon="@drawable/ic_profile"/>
+                <item
+                    android:id="@+id/nav_setting"
+                    android:title="Settings"
+                    android:icon="@drawable/ic_settings"/>
+                <item
+                    android:id="@+id/nav_aboutUs"
+                    android:title="About us"
+                    android:icon="@drawable/ic_about_us"/>
+            </menu>
+        </item>
+    </group>
+
+    <item android:title="Guest">
+        <menu>
+            <item
+                android:id="@+id/nav_guest"
+                android:title="Guest"
+                android:icon="@drawable/ic_guest"/>
+        </menu>
+    </item>
+
+</menu>
