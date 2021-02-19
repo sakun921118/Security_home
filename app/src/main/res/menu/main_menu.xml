@@ -1,15 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item android:title="Home">
+            <menu>
+                <item
+                    android:id="@+id/main_page"
+                    android:title="Home control"
+                    android:icon="@drawable/ic_home"/>
+            </menu>
+        </item>
+    </group>
 
     <group android:checkableBehavior="single">
         <item android:title="Room">
             <menu>
                 <item
-                    android:id="@+id/nav_home"
-                    android:title="Home control"
-                    android:icon="@drawable/ic_home"/>
+                    android:id="@+id/roomControl_page"
+                    android:title="Room control"
+                    android:icon="@drawable/ic_home2"/>
                 <item
-                    android:id="@+id/nav_powerUsed"
+                    android:id="@+id/powerUsed_page"
                     android:title="Power used"
                     android:icon="@drawable/ic_power_used"/>
                 <item
@@ -25,11 +38,11 @@
         <item android:title="App">
             <menu>
                 <item
-                    android:id="@+id/nav_profile"
-                    android:title="Profile"
-                    android:icon="@drawable/ic_profile"/>
+                    android:id="@+id/mode_page"
+                    android:title="Mode"
+                    android:icon="@drawable/ic_developer_mode"/>
                 <item
-                    android:id="@+id/nav_setting"
+                    android:id="@+id/setting_page"
                     android:title="Settings"
                     android:icon="@drawable/ic_settings"/>
                 <item

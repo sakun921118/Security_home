@@ -10,27 +10,27 @@
     <ImageView
         android:id="@+id/num1_img"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginEnd="5dp"
         android:layout_marginBottom="10dp"
         app:layout_constraintBottom_toTopOf="@+id/num2_btn"
         app:layout_constraintEnd_toStartOf="@+id/num2_img"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6"
-        app:srcCompat="@drawable/ic_launcher_background" />
+        app:layout_constraintTop_toBottomOf="@+id/description_tv"
+        app:srcCompat="@drawable/ic_password_null" />
 
     <ImageView
         android:id="@+id/num2_img"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_marginEnd="5dp"
         android:layout_marginBottom="10dp"
         app:layout_constraintBottom_toTopOf="@+id/num2_btn"
         app:layout_constraintEnd_toStartOf="@+id/num3_img"
         app:layout_constraintStart_toEndOf="@+id/num1_img"
-        app:layout_constraintTop_toBottomOf="@+id/textView6"
-        app:srcCompat="@drawable/ic_launcher_background" />
+        app:layout_constraintTop_toBottomOf="@+id/description_tv"
+        app:srcCompat="@drawable/ic_password_null" />
 
     <Button
         android:id="@+id/num0_btn"
@@ -237,7 +237,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/title_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -252,54 +252,64 @@
     <ImageView
         android:id="@+id/num3_img"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_marginEnd="5dp"
         android:layout_marginBottom="10dp"
         app:layout_constraintBottom_toTopOf="@+id/num2_btn"
         app:layout_constraintEnd_toStartOf="@+id/num4_img"
         app:layout_constraintStart_toEndOf="@+id/num2_img"
-        app:layout_constraintTop_toBottomOf="@+id/textView6"
-        app:srcCompat="@drawable/ic_launcher_background" />
+        app:layout_constraintTop_toBottomOf="@+id/description_tv"
+        app:srcCompat="@drawable/ic_password_null" />
 
     <ImageView
         android:id="@+id/num4_img"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_marginEnd="5dp"
         android:layout_marginBottom="10dp"
         app:layout_constraintBottom_toTopOf="@+id/num2_btn"
         app:layout_constraintEnd_toStartOf="@+id/num5_img"
         app:layout_constraintStart_toEndOf="@+id/num3_img"
-        app:layout_constraintTop_toBottomOf="@+id/textView6"
-        app:srcCompat="@drawable/ic_launcher_background" />
+        app:layout_constraintTop_toBottomOf="@+id/description_tv"
+        app:srcCompat="@drawable/ic_password_null" />
 
     <ImageView
         android:id="@+id/num5_img"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_marginEnd="5dp"
         android:layout_marginBottom="10dp"
         app:layout_constraintBottom_toTopOf="@+id/num2_btn"
         app:layout_constraintEnd_toStartOf="@+id/num6_img"
         app:layout_constraintStart_toEndOf="@+id/num4_img"
-        app:layout_constraintTop_toBottomOf="@+id/textView6"
-        app:srcCompat="@drawable/ic_launcher_background" />
+        app:layout_constraintTop_toBottomOf="@+id/description_tv"
+        app:srcCompat="@drawable/ic_password_null" />
 
     <ImageView
         android:id="@+id/num6_img"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_marginEnd="5dp"
         android:layout_marginBottom="10dp"
         app:layout_constraintBottom_toTopOf="@+id/num2_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/num5_img"
-        app:layout_constraintTop_toBottomOf="@+id/textView6"
-        app:srcCompat="@drawable/ic_launcher_background" />
+        app:layout_constraintTop_toBottomOf="@+id/description_tv"
+        app:srcCompat="@drawable/ic_password_null" />
+
+    <TextView
+        android:id="@+id/description_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_tv" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,8 +8,8 @@
                 android:bottomLeftRadius="50dp"
                 android:topRightRadius="50dp"
                 android:topLeftRadius="50dp"/>
-            <gradient android:startColor="#80409C78"
-                android:endColor="#409C78"/>
+            <gradient android:startColor="@color/selectedBackgroundDd"
+                android:endColor="@color/selectedBackground"/>
             <stroke android:color="@android:color/darker_gray" android:width="2dp"/>
         </shape>
     </item>
@@ -21,8 +21,8 @@
                 android:bottomLeftRadius="50dp"
                 android:topRightRadius="50dp"
                 android:topLeftRadius="50dp"/>
-            <gradient android:startColor="#809C4040"
-                android:endColor="#9C4040"/>
+            <gradient android:startColor="@color/selectedBackgroundDd"
+                android:endColor="@color/selectedBackground"/>
             <stroke android:color="@android:color/darker_gray" android:width="2dp"/>
         </shape>
     </item>

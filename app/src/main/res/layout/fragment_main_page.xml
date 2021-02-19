@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="18dp"
-    tools:context=".Main_page">
+    tools:context=".fragmentPage.Main_page">
 
 
     <androidx.cardview.widget.CardView
@@ -38,7 +38,8 @@
                 android:layout_width="130dp"
                 android:layout_height="130dp"
                 android:layout_centerHorizontal="true"
-                android:src="@drawable/sample_picture" />
+                android:src="@drawable/ic_powerused"
+                android:padding="18dp"/>
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 
@@ -72,7 +73,8 @@
                 android:layout_width="130dp"
                 android:layout_height="130dp"
                 android:layout_centerHorizontal="true"
-                android:src="@drawable/sample_picture" />
+                android:padding="18dp"
+                android:src="@drawable/ic_roomcontrol" />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 
@@ -105,7 +107,8 @@
                 android:layout_width="130dp"
                 android:layout_height="130dp"
                 android:layout_centerHorizontal="true"
-                android:src="@drawable/sample_picture" />
+                android:src="@drawable/ic_aboutus"
+                android:padding="1dp"/>
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 
@@ -138,7 +141,8 @@
                 android:layout_width="130dp"
                 android:layout_height="130dp"
                 android:layout_centerHorizontal="true"
-                android:src="@drawable/sample_picture" />
+                android:src="@drawable/ic_setting"
+                android:padding="18dp"/>
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 
@@ -191,17 +195,17 @@
                 android:id="@+id/textView4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/imageView2"
+                android:layout_below="@id/doorLock_iv"
                 android:layout_centerHorizontal="true"
                 android:fontFamily="casual"
                 android:text="Open Door" />
 
             <ImageView
-                android:id="@+id/imageView2"
+                android:id="@+id/doorLock_iv"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_centerHorizontal="true"
-                android:src="@drawable/sample_picture" />
+                android:src="@drawable/ic_door_close" />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 

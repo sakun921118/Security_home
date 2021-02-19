@@ -1,69 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="12dp"
-    tools:context=".PowerUsed_page">
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".fragmentPage.PowerUsed_page">
 
-    <ScrollView
-        android:id="@+id/scrollView2"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="95dp">
+        android:layout_height="wrap_content">
 
-        <LinearLayout
+        <com.robinhood.spark.SparkView
+            android:id="@+id/sparkView"
             android:layout_width="match_parent"
+            android:layout_height="175dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/allPowerUsed_tv"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:elevation="@dimen/cardview_default_elevation"
+            android:text="0.000kWh"
+            android:textSize="24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/sparkView"
+            app:layout_constraintEnd_toEndOf="@+id/sparkView" />
 
-            <com.robinhood.spark.SparkView
-                android:layout_width="match_parent"
-                android:layout_height="200dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="16dp"
-                android:gravity="center"
-                android:orientation="horizontal">
+    <RadioGroup
+        android:id="@+id/tvLabel_ly"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:orientation="horizontal">
 
-                <RadioButton
-                    android:id="@+id/radioButton3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:checked="true"
-                    android:gravity="center"
-                    android:text="Month" />
+        <RadioButton
+            android:id="@+id/radioButtonMonth"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:gravity="center"
+            android:text="Month" />
 
-                <RadioButton
-                    android:id="@+id/radioButton2"
-                    android:layout_width="75dp"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="Week" />
+        <RadioButton
+            android:id="@+id/radioButtonWeek"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Week" />
 
-                <RadioButton
-                    android:id="@+id/radioButton"
-                    android:layout_width="75dp"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="Day" />
+        <RadioButton
+            android:id="@+id/radioButtonDay"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Day" />
 
-                <Spinner
-                    android:id="@+id/spinner"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-            </RadioGroup>
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </RadioGroup>
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-        </LinearLayout>
-    </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ExpandableListView
+            android:id="@+id/eList_view"
+            android:layout_width="match_parent"
+            android:layout_height="472dp"
+            android:layoutDirection="ltr"/>
+    </LinearLayout>
+
+</LinearLayout>
