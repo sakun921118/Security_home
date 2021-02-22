@@ -88,7 +88,7 @@ class OutDoorMode_page : Fragment(){
             useBiometricLogin()
         }
 
-        binding.doorOpenBtn.setOnClickListener{
+        binding.doorRingBtn.setOnClickListener{
             doorRing()
         }
 
@@ -100,12 +100,12 @@ class OutDoorMode_page : Fragment(){
             SecurityHomeServer(it.context).doorRing({ status, message ->
                 when(status){
                     SecurityHomeStatus.Success.value -> {
-                        binding.ringImg.setImageResource(R.drawable.ic_door_open)
+                        binding.ringImg.setImageResource(R.drawable.ic_ring_on)
                         Toast.makeText(it.context, "Ring Success", Toast.LENGTH_SHORT).show()
                         communicator.vibratePhone(500)
 
                         Handler(Looper.getMainLooper()).postDelayed({
-                            binding.ringImg.setImageResource(R.drawable.ic_door_close)
+                            binding.ringImg.setImageResource(R.drawable.ic_ring_off)
                         }, 3000)
                     }
                     SecurityHomeStatus.Failed.value -> communicator.msgBox("Need setting!", "You need to set your main door!", false)

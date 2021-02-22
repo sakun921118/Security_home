@@ -168,7 +168,7 @@ class SecurityHomeServer(private var context: Context): Encryption() {
             val jsonObject = JSONObject()
                     .put("accountToken", super.encryption(AccountToken))
                     .put("deviceId", super.encryption(DeviceId))
-                    .put("status", 2)
+                    .put("deviceStatus", 2)
 
             var status = false
 
